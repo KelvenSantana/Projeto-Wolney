@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +28,30 @@ public class Cliente implements Serializable {
 	
 	@Column(unique = true, nullable = false)
 	private String email;
+	
+	@ManyToOne
+	@JoinColumn(name = "cod_instrumentos")
+	private Instrumentos instrumentos;
+	
+	@ManyToOne
+	@JoinColumn(name = "cod_acessorios")
+	private Acessorios acessorios;
+
+	public Acessorios getAcessorios() {
+		return acessorios;
+	}
+
+	public void setAcessorios(Acessorios acessorios) {
+		this.acessorios = acessorios;
+	}
+
+	public Instrumentos getInstrumentos() {
+		return instrumentos;
+	}
+
+	public void setInstrumentos(Instrumentos instrumentos) {
+		this.instrumentos = instrumentos;
+	}
 
 	public Integer getId() {
 		return id;

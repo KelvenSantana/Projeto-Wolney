@@ -17,51 +17,45 @@ public class Acessorios implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int cod;
+	private Integer cod;
 	
 	@Column
-	private String correia;
+	private String nome;
 	
 	@Column
-	private String tipodecorda;
+	private int quant;
 
-	public int getCod() {
+	public Integer getCod() {
 		return cod;
 	}
 
-	public void setCod(int cod) {
+	public void setCod(Integer cod) {
 		this.cod = cod;
 	}
 
-	public String getCorreia() {
-		return correia;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setCorreia(String correia) {
-		this.correia = correia;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getTipodecorda() {
-		return tipodecorda;
+	public int getQuant() {
+		return quant;
 	}
 
-	public void setTipodecorda(String tipodecorda) {
-		this.tipodecorda = tipodecorda;
-	}
-
-	public String getCabo() {
-		return cabo;
-	}
-
-	public void setCabo(String cabo) {
-		this.cabo = cabo;
+	public void setQuant(int quant) {
+		this.quant = quant;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-	@Column
-	private String cabo;
+	
+
+	
+	
 
 }

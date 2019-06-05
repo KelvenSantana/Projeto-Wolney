@@ -19,17 +19,11 @@ private static final long serialVersionUID = 1L;
 	private Integer cod;
 	
 	@Column
-	private String bateria;
+	private String nome;
 	
 	@Column
-	private String baixo;
-	
-	@Column
-	private String guitarra;
-	
-	@Column
-	private String teclado;
-	
+	private int quant;
+
 	public Integer getCod() {
 		return cod;
 	}
@@ -38,41 +32,26 @@ private static final long serialVersionUID = 1L;
 		this.cod = cod;
 	}
 
-	public String getBateria() {
-		return bateria;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setBateria(String bateria) {
-		this.bateria = bateria;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getBaixo() {
-		return baixo;
+	public int getQuant() {
+		return quant;
 	}
 
-	public void setBaixo(String baixo) {
-		this.baixo = baixo;
-	}
-
-	public String getGuitarra() {
-		return guitarra;
-	}
-
-	public void setGuitarra(String guitarra) {
-		this.guitarra = guitarra;
-	}
-
-	public String getTeclado() {
-		return teclado;
-	}
-
-	public void setTeclado(String teclado) {
-		this.teclado = teclado;
+	public void setQuant(int quant) {
+		this.quant = quant;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
 
 	
 	
